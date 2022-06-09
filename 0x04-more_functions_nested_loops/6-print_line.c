@@ -21,7 +21,6 @@ void print_line(int m)
 		{
 			_putchar('_')
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
-
