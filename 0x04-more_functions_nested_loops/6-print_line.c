@@ -3,13 +3,13 @@
 
 /**
  * print_line - Straight line to the terminal
- * @m: character in use
+ * @n: character in use
  * Return: 0
 */
 
-void print_line(int m)
+void print_line(int n)
 {
-	if (m <= 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	} else
@@ -17,7 +17,7 @@ void print_line(int m)
 		int j;
 
 
-		for (j = 1; j <= m; j++)
+		for (j = 1; j <= n; j++)
 		{
 			_putchar('_')
 		}
