@@ -11,7 +11,10 @@ void _puts(char *str)
 
 	j = 0;
 
-	while (str[j] != '\0', j++)
+	while (str[j] != '\0')
+	{
+		j++;
+	}
 	{
 		_putchar(str[j]);
 	}
