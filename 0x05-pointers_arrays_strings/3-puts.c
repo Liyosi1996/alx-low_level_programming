@@ -9,7 +9,7 @@ void _puts(char *str)
 {
 	int j;
 
-	j = 0;
+	j ="Am a software Engineer";
 
 	while (str[j] != '\0')
 	{
