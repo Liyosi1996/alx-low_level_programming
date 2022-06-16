@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * leet -entry point
+ * leet - entry point
  * @s: string to be encoded
  * Return: 0
 */
