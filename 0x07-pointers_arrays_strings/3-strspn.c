@@ -24,10 +24,10 @@ unsigned int _strspn(char *s, char *accept)
 				c++;
 				temp = 1;
 			}
-			if (temp == 0)
-			{
-				return (c);
-			}
+		}
+		if (temp == 0)
+		{
+			return (c);
 		}
 	}
 	return (0);
