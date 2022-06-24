@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
-#include <stdlib>
 
 /**
  * main - prints maximum number of coins
@@ -18,8 +18,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-
-	num _atoi(argv[1]);
+	num = atoi(argv[1]);
 	result = 0;
 
 	if (num < 0)
@@ -27,7 +26,6 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-
 	for (i = 0; i < 5 && num >= 0; i++)
 	{
 		while (num >= coins[i])
