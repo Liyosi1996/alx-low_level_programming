@@ -18,8 +18,8 @@ int main(int argc, char **argv)
 		{
 			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				puts("Error")
-					return (1);
+				puts("Error");
+				return (1);
 			}
 		}
 	}
