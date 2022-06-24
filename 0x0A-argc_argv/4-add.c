@@ -12,8 +12,18 @@ int main(int argc, char **argv)
 {
 	int n, m, result = 0;
 
-	for (n = 1; n < argc; n += 1)
+	for (n = 1; n < argc; n++)
 	{
-		for (m = 0; (argv[n][m] != '\0'; m +=1))
+		for (m = 0; argv[n][m] != '\0'; m++)
 		{
-			if (((argv[n])[m] - '0' >= 0 && ((argv[n][m] - '0') <= 9)
+			if (!isdigit(argv[n][m]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		result += atoi(argv[n]);
+	}
+	printf("%d\n", result);
+	return (0);
+}
