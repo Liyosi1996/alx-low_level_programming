@@ -10,20 +10,30 @@
 
 int main(int argc, char **argv)
 {
-	int n, m, result = 0;
+	int num, k, i, j, sum = 0;
 
-	for (n = 1; n < argc; n++)
+	for (i = i; i < argc; i++)
 	{
-		for (m = 0; argv[n][m] != '\0'; m++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!isdigit(argv[n][m]))
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				printf("Error\n");
-				return (1);
+				puts("Error")
+					return (1);
 			}
 		}
-		result += atoi(argv[n]);
 	}
-	printf("%d\n", result);
+	for (k = 1; k < argc; k++)
+	{
+		num = atoi(argv[k]);
+		if (num >= 0)
+		{
+			sum += num;
+		}
+	}
+
+	printf("%d\n", sum);
 	return (0);
 }
+
+
