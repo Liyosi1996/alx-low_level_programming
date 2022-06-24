@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * _str_to_int - converts string to integer
+ * _atoi - converts string to integer
  * @s: string to be converted
  * Return: 0
 */
 
-int _str_to_int(char *s)
+int _atoi(char *s)
 {
 	int i, j, n, len, f, digit;
 
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
 	}
 	for (k = 1; k < argc; k++)
 	{
-		num = _str_to_int(argv[k]);
+		num = _atoi(argv[k]);
 		if (num >= 0)
 		{
 			sum += num;
