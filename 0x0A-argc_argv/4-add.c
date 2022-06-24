@@ -45,10 +45,10 @@ int _str_to_int(char *s)
 }
 
 /**
- * main - adds two positive number
+ * main - prints sum of two positive numbres
  * @argc: number of arguments
  * @argv: array of arguments
- * Returns: 0
+ * Return: 0
 */
 
 int main(int argc, char **argv)
