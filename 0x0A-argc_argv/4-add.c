@@ -29,7 +29,7 @@ int num_checker(char *s)
 
 int main(int argc, char **argv)
 {
-	int i;
+	int sum, i;
 
 	sum = 0;
 
