@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
 	sum = 0;
 
-	for (i = 1; i < argc; i++)
+	for (i = 1; i < argc; ++i)
 	{
 		if (num_checker(argv[i] == 0))
 		{
