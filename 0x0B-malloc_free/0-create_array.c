@@ -20,10 +20,10 @@ char *create_array(unsigned int size, char c)
 
 		return (NULL);
 
-	for (b = 0; b < size; a++)
+	for (b = 0; b < size; b++)
 	{
-		s[b] = c;
+		ptr[b] = c;
 	}
-	return (s);
+	return (ptr);
 }
 
