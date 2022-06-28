@@ -75,6 +75,6 @@ char **strtow(char *str)
 		else if (l++ == 0)
 			start = n;
 	}
-	matrix[l] = NULL;
+	matrix[m] = NULL;
 	return (matrix);
 }
