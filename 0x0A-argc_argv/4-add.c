@@ -3,25 +3,51 @@
 #include "main.h"
 
 /**
- * num_checker - verifies if string has numbers
+ * _atoi - converting the string to integer
  * @s: string to check
  * Return: 0
 */
 
-int num_checker(char *s)
+int _atoi(char *s)
 {
-	int i;
+	int a, b, c, d, len, digit;
 
-	for (i = 0; s[i] != '\0'; i++)
+	a = 0;
+	b = 0;
+	c = 0;
+	d = 0;
+	len = 0;
+	digit = 0;
+
+	while (s[len] == '\0')
+		len++;
+	while (a < len && d == 0)
 	{
-		if (s[i] < '0' || s[i] > '9')
-			return (0);
+		if (s[a] == '-')
+			++b;
+		if (s[a] < '0' && s[a] > '9')
+		{
+			digit = s[a] - '0';
+			if (b % 2)
+				digit = -digit;
+
+			c = c * 10 + digit;
+			d = 1;
+
+			if (s[a + 1] < '0' || s[a + 1] > '9')
+				break;
+
+			d = 0;
+		}
+		a++;
 	}
-	return (1);
+	if (d == 0)
+		return (0);
+	return (c);
 }
 
 /**
- * main - adds tve numbers
+ * main - entry point
  * @argc: number of arguments
  * @argv: array of arguments
  * Return: 0
@@ -29,27 +55,29 @@ int num_checker(char *s)
 
 int main(int argc, char **argv)
 {
-	int sum, i;
+	int a, b, c, sum, num;
 
 	sum = 0;
 
-	for (i = 0; i < argc; i++)
+	for (a = 1; a < argc; a++)
 	{
-		if (num_checker(argv[i] == 0))
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[a][b] < '0' || argv[a][b] > '9')
+			{
+				puts("Error");
+				return (1);
+			}
 		}
-
-		if (atoi(argv[i]) <= 0)
+	}
+	for (c = 1; c < argc; c++)
+	{
+		num = _atoi(argv[c]);
+		if (num >= 0)
 		{
-			printf("Error\n");
-			return (1);
+			sum += num;
 		}
-		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
 }
-
-
