@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -18,8 +19,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	P = malloc(nmemb * size);
 	if (p == NULL)
+	{
 		return (NULL);
-	for (a = 0; a < nmemb * size; a++)
-		*(p + a) = 0;
-	return ((void *)p);
+	}
+	a = 0;
+	while (a < nmemb * size)
+	{
+		p[a] = 0;
+		a++;
+	}
+	return (p);
 }
