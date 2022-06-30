@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
 /**
  * _set - fills the memory
  * @s: memory area to be filled
@@ -35,11 +36,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	P = malloc(size * nmemb);
+	p = malloc(size * nmemb);
 	if (p == NULL)
-	{
 		return (NULL);
-	}
 	_set(p, 0, nmemb * size);
 
 	return (p);
