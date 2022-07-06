@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "function_pointers.h"
 
 /**
@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int bytes, j;
-	char *p;
+	char *arr;
 
 	if (argc != 2)
 	{
@@ -28,16 +28,16 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	p = (char *)main;
+	arr = (char *)main;
 
 	for (j = 0; j < bytes; j++)
 	{
 		if (j == bytes - 1)
 		{
-			printf("%02hhx\n", p[j]);
+			printf("%02hhx\n", arr[j]);
 			break;
 		}
-		printf("%02hhx ", p[j]);
+		printf("%02hhx ", arr[j]);
 	}
 	return (0);
 }
