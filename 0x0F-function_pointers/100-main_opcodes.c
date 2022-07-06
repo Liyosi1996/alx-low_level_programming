@@ -11,8 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int bytes, j;
-	char *arr;
+	int j;
 
 	if (argc != 2)
 	{
@@ -20,24 +19,17 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	bytes = atoi(agrv[1]);
-
-	if (bytes < 0)
+	if (atoi(argv[j]) < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	arr = (char *)main;
-
-	for (j = 0; j < bytes; j++)
+	while (j < atoi(argv[1]) - 1)
 	{
-		if (j == bytes - 1)
-		{
-			printf("%02hhx\n", arr[j]);
-			break;
-		}
-		printf("%02hhx ", arr[j]);
+		printf("%02hhx ", ((char *) main)[j]);
+		j++;
 	}
+	printf("%02hhx\n", ((char *) main)[j]);
 	return (0);
 }
