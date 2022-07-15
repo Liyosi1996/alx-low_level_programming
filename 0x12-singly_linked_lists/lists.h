@@ -5,7 +5,7 @@
 
 
 /**
- * struct list_s
+ * struct list_s - main entry
  * @str: string
  * @len: length of string
  * @next: points to the next node
