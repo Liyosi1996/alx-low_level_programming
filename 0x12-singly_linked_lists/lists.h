@@ -7,7 +7,7 @@
 /**
  * struct list_s
  * @str: string
- * @length: length of string
+ * @len: length of string
  * @next: points to the next node
  * Description: singly linked lists
 */
