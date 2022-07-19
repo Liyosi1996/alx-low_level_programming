@@ -10,7 +10,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t list = 0;
-	long int dif = 0;
+	long int dif;
 
 	while (head)
 	{
