@@ -4,7 +4,7 @@
 /**
  * free_listint_safe - frees a linked list
  * @h: pointer to the first node
- * Return: 0
+ * Return: number of elements
 */
 
 size_t free_listint_safe(listint_t **h)
