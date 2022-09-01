@@ -32,13 +32,11 @@ size_t dlistint_len(const dlistint_t *h)
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-<<<<<<< HEAD
 	dlistint_t *current;
 	unsigned int j = 0;
-=======
+
 	dlistint_t *temp = *head;
 	unsigned int i = 0;
->>>>>>> 4acc4a9af81d25630aabd7bdfddbaa74552e6448
 
 	if (*head == NULL || dlistint_len(temp) < index + 1)
 		return (-1);
